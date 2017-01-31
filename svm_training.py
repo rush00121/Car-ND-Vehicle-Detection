@@ -275,13 +275,14 @@ def train_svm():
     for image in carFiles:
         cars.append(image)
     print("Loaded car files")
-    nonCarFiles = glob.glob("non-vehicles/*/*.png", recursive=False)
+    nonCarFiles = glob.glob("non-vehicles/*/*.png", recursive=True)
     notcars = []
     print("Loading non-car files")
     for image in nonCarFiles:
         notcars.append(image)
 
-
+    print("Loaded " , len(cars) , " cars")
+    print("Loaded " , len(nonCarFiles) , " non cars")
     print("Extracting car features")
     car_features = extract_features(cars, color_space=color_space,
                                     spatial_size=spatial_size, hist_bins=hist_bins,
