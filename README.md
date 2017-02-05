@@ -40,7 +40,7 @@ I am using 18 orientations , 8 pixel per cell and 2 cell per blocks. The main mo
 this selection is 
 
 * Accuracy of the classifier
-* Time taken to extract features( since HOG extraction is time consuming , we need to be considerate about how many 
+* Time taken to extract features( since HOG extraction is time consuming , we need to be considerate about how many and
  what configuration we pick)
 
 ```
