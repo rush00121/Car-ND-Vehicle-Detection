@@ -307,6 +307,8 @@ for i in filterd_boxes:
 
 ###Output Video
 
+<a href="output.mp4">Output Video</a>
+
 The output video of the project video is stored as output.mp4
 
  
