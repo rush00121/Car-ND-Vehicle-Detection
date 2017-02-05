@@ -57,7 +57,7 @@ Additionally, I also tried using the spatial and the histogram features for trai
 
 Below is an example of the HOG feature for both vehicle , non - vehicle data 
 
-![Alt Vehicle Example](vehicles/GTI_Far/image0000.png)
+![Alt Vehicle Example](examples/image0000.png)
 
 <b>Example Vehicle Image</b>
 
@@ -102,7 +102,7 @@ Below is an example of the HOG feature for both vehicle , non - vehicle data
 <b>YCrCB CH 2 HOG Vehicle features</b>
 
 
-![Alt Vehicle Example](non-vehicles/Extras/extra1.png)
+![Alt Vehicle Example](examples/extra1.png)
 
 <b>Example Non-Vehicle Image</b>
 
