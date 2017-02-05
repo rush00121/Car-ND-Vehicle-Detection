@@ -325,7 +325,25 @@ for i in filterd_boxes:
 
 The output video of the project video is stored as output.mp4
 
- 
- 
+
+Discussion 
+---
+#####Shortcomings
+1) As seen in the output video, the object detection is good but still not good enough
+2) There are places where the white car is not detected for several seconds 
+3) Also it is not an easy task to detect whether there is 1 car or 2 cars when the cars are 
+ overlapping in the video
+4) HOG is a very computationally expensive operation. It took me around 2 hours to compute a 50 second video
+5) Intelligently detecting windows to run the HOG on can help improve performance but it is not fail safe.
+6) If we are to use this in real time, we need to run more than 20-30 frames a second.
+7) HOG will not lead us to this performance. In my opinion, we should use deep learning to detect vehicles as well as other objects 
+simultanesouly in the image. 
+
+#####Future work
+1) As suggested above, I would like to implement this pipeline using a deep learning based classifier. 
+2) Instead of using a sliding window, it would be great if we can simply pass in the entire image as input and 
+detect the locations of the vehicle masked onto the image as output . 
+3) This is a classification + regression problem that has been successfully solved in systems like YOLO. 
+4) I would like to use that as an inspiration to solve this project again and optimize the performance of vehicle detection.
 
 
