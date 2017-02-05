@@ -269,11 +269,25 @@ def add_heat(heatmap, bbox_list):
 2) We maintain a moving list of the last 10 heatmap images. We update this moving list of heatmap with the latest heatmap   
 
 3) For the final output heatmap, we average out the last 10 heatmaps. This helps us reduce false positives. 
- ie . If our classifier detects a behicle in 1 image but not in any other,then this value will be 
+ ie . If our classifier detects a vehicle in 1 image but not in any other,then this value will be 
  averaged out in our final output. 
  
 4) We then threshold the heatmap to allow output where there has been an overap of at least 2. 
 This helps us to maintain strong detection only and any weak detections will be weeded out.
+
+```
+ holder.previousHeat[holder.iteration%holder.averageCount] = heatmap
+    total = np.zeros(np.array(holder.previousHeat[0]).shape)
+    
+    for value in holder.previousHeat:
+        total = total + np.array(value)
+    
+    averageHeatMap = total/holder.averageCount
+    
+    averageHeatMap = apply_threshold(averageHeatMap,2)
+
+```
+5) This averaging makes our output smoother as well as helps remove false positives
 
 ![Alt Vehicle Example](output_images/HeatMap.png)
 
